@@ -4,3 +4,4 @@ config_google_oauth2_credentials_secret.json
 config_google_oauth2_credentials_secret.json.backup
 config_google_oauth2_credentials_secret.json.local
 config.json
+vendor
