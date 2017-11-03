@@ -19,12 +19,10 @@ It is not yet live at bigoquiz.com.
 
     $ git clone git@github.com:murraycu/go-bigoquiz-server.git
     $ cd go-bigoquiz-server
-    $ export GOPATH=`pwd`
-    $ go get all
-      (Ignoring the apparently-intended "cannot find package" messages.)
-    $ go build bigoquiz
+    $ dep ensure
+    $ go build
 
-    $ gcloud app deploy src/bigoquiz
+    $ gcloud app deploy
 
 ### Running locally
 
@@ -34,12 +32,12 @@ It is not yet live at bigoquiz.com.
 
     Use an appropriate oauth2 config file:
     (These cannot be added to the git repository.)
-    $ cp src/bigoquiz/config_google_oauth2_credentials_secret.json src/bigoquiz/config_google_oauth2_credentials_secret.json.backup
-    $ cp src/bigoquiz/config_google_oauth2_credentials_secret.json.local src/bigoquiz/config_google_oauth2_credentials_secret.json
+    $ cp config_google_oauth2_credentials_secret.json config_google_oauth2_credentials_secret.json.backup
+    $ cp config_google_oauth2_credentials_secret.json.local config_google_oauth2_credentials_secret.json
 
 
     Then start the local server:
-    $ dev_appserver.py src/bigoquiz
+    $ dev_appserver.py .
 
 [1]: https://developers.google.com/appengine
 [2]: https://golang.org
